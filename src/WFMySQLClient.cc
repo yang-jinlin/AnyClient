@@ -16,9 +16,9 @@
   Authors: Wu Jiaxu (wujiaxu@sogou-inc.com)
 */
 
-#include "WFTaskFactory.h"
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFGlobal.h>
 #include "WFMySQLClient.h"
-#include "WFGlobal.h"
 
 static inline bool __set_result(WFMySQLTask *task, WFMySQLResult& res)
 {

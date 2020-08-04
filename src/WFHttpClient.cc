@@ -17,9 +17,9 @@
            Li Yingxin (liyingxin@sogou-inc.com)
 */
 
-#include "WFTaskFactory.h"
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFGlobal.h>
 #include "WFHttpClient.h"
-#include "WFGlobal.h"
 
 static inline int __set_result(WFHttpTask *task, WFHttpResult& res)
 {

@@ -17,9 +17,9 @@
            Li Yingxin (liyingxin@sogou-inc.com)
 */
 
-#include "WFTaskFactory.h"
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFGlobal.h>
 #include "WFRedisClient.h"
-#include "WFGlobal.h"
 
 static inline bool __set_result(WFRedisTask *task, WFRedisResult& res)
 {

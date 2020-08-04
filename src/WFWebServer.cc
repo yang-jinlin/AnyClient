@@ -16,9 +16,9 @@
   Authors: Wu Jiaxu (wujiaxu@sogou-inc.com)
 */
 
+#include <workflow/StringUtil.h>
+#include <workflow/HttpUtil.h>
 #include "WFWebServer.h"
-#include "StringUtil.h"
-#include "HttpUtil.h"
 
 using namespace protocol;
 

@@ -22,11 +22,11 @@
 #include <string>
 #include <vector>
 #include <functional>
-#include "MySQLMessage.h"
-#include "MySQLResult.h"
-#include "URIParser.h"
-#include "WFTaskFactory.h"
-#include "WFFuture.h"
+#include <workflow/MySQLMessage.h>
+#include <workflow/MySQLResult.h>
+#include <workflow/URIParser.h>
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFFuture.h>
 
 /**
  * @file   WFMySQLClient.h

@@ -21,7 +21,7 @@
 
 #include <string>
 #include <functional>
-#include "WFHttpServer.h"
+#include <workflow/WFHttpServer.h>
 
 /**
  * @file   WFWebServer.h
@@ -29,7 +29,7 @@
  */
 
 using web_handler_t = std::function<void (const protocol::HttpRequest&,
-											protocol::HttpResponse&)>;
+												protocol::HttpResponse&)>;
 
 #include "WFWebServer.inl"
 

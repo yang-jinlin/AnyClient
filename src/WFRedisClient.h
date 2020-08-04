@@ -23,10 +23,10 @@
 #include <string>
 #include <vector>
 #include <functional>
-#include "RedisMessage.h"
-#include "URIParser.h"
-#include "WFTaskFactory.h"
-#include "WFFuture.h"
+#include <workflow/RedisMessage.h>
+#include <workflow/URIParser.h>
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFFuture.h>
 
 /**
  * @file   WFRedisClient.h

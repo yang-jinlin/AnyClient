@@ -23,9 +23,9 @@
 #include <string>
 #include <map>
 #include <functional>
-#include "HttpMessage.h"
-#include "WFTaskFactory.h"
-#include "WFFuture.h"
+#include <workflow/HttpMessage.h>
+#include <workflow/WFTaskFactory.h>
+#include <workflow/WFFuture.h>
 
 /**
  * @file   WFHttpClient.h

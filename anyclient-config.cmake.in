@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+
+set(ANYCLIENT_VERSION "@anyclient_VERSION@")
+set_and_check(ANYCLIENT_INCLUDE_DIR "@PACKAGE_CONFIG_INC_DIR@")
+set_and_check(ANYCLIENT_LIB_DIR "@PACKAGE_CONFIG_LIB_DIR@")
+
+check_required_components(AnyClient)
+
