@@ -1,10 +1,4 @@
-# AnyClient
-
-## C++万能客户端
-- Http Client
-- Redis Client
-- MySQL Client
-- Kafka Client
+# AnyClient / C++万能客户端
 
 ## 特点
 - 极致高性能
