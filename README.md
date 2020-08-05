@@ -15,6 +15,19 @@
 - 支持异步回调、半同步future、同步等待三套接口
 - 协议无关，可以模仿现有client开发自定义协议
 
+## 目录
+万能客户端将世间所有编程需求规约为以下6种
+- [网络IO](https://github.com/alpc62/AnyClient#网络io)
+  - [HttpClient](https://github.com/alpc62/AnyClient#httpclient)
+  - [RedisClient](https://github.com/alpc62/AnyClient#redisclient)
+  - [MySQLClient](https://github.com/alpc62/AnyClient#mysqlclient)
+  - [KafkaClient](https://github.com/alpc62/AnyClient#kafkaclient)
+- [磁盘IO](https://github.com/alpc62/AnyClient#磁盘io)
+- [定时器](https://github.com/alpc62/AnyClient#定时器)
+- [计数器](https://github.com/alpc62/AnyClient#计数器)
+- [CPU](https://github.com/alpc62/AnyClient#cpu)
+- [GPU](https://github.com/alpc62/AnyClient#gpu)
+
 ## 网络IO
 ### HttpClient
 ~~~cpp
