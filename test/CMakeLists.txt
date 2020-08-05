@@ -28,9 +28,9 @@ else ()
 endif ()
 
 set(TEST_LIST
-	http_unittest
-	redis_unittest
-	mysql_unittest
+	http_client_unittest
+	redis_client_unittest
+	mysql_client_unittest
 )
 
 foreach(src ${TEST_LIST})
