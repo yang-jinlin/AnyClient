@@ -68,11 +68,11 @@ int main(int argc, char *argv[])
 					cout << "[4]Asynchronous redis request end. success: " << val.is_ok() << endl;
 					for (size_t i = 0; i < val.arr_size(); i++)
 						cout << "[" << i << "] element-string: " << val[i].string_value() << endl;
-
-					wg.done();
 				})
 				.error([](int state, int error, const std::string& errmsg) {
 					cout << "[4]Asynchronous redis request end. error: " << errmsg << endl;
+				})
+				.complete([](WFRedisResult& res) {
 					wg.done();
 				})
 				.send();

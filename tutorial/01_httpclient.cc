@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
 	http_headers["cookie"] = "emotion=happy;code=simple";
 
 	std::string http_body;
-
 	http_body.clear();//no need http body data
 
 //// sync
@@ -78,10 +77,11 @@ int main(int argc, char *argv[])
 				.set_header("cookie", "1412")
 				.success([](protocol::HttpResponse& http_resp) {
 					cout << "[4]Asynchronous http request end. HttpStaus: " << http_resp.get_status_code() << endl;
-					wg.done();
 				})
 				.error([](int state, int error, const std::string& errmsg) {
 					cout << "[4]Asynchronous http request end. error: " << errmsg << endl;
+				})
+				.complete([](WFHttpResult& res) {
 					wg.done();
 				})
 				.send();

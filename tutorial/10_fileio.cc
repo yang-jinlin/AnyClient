@@ -48,7 +48,7 @@ static void __async_bio()
 
 	close(fd);
 }
-/*
+
 static void __async_dio()
 {
 	char *write_data;
@@ -62,25 +62,25 @@ static void __async_dio()
 	for (int i = 0; i < 4096; i++)
 		write_data[i] = (char)i;
 
-	auto future1 = WFFacilities::async_pwrite(fd, &write_data, 4096, 0);
+	auto future1 = WFFacilities::async_pwrite(fd, write_data, 4096, 0);
 	// do anything you want
 	sz = future1.get();
 	cout << "write size = " << sz << endl;
 
-	auto future2 = WFFacilities::async_pread(fd, &read_data, 4096, 0);
+	auto future2 = WFFacilities::async_pread(fd, read_data, 4096, 0);
 	// do anything you want
 	sz = future2.get();
 	cout << "read size = " << sz << endl;
-	if (memcmp(&read_data, &write_data, 4096) != 0)
+	if (memcmp(read_data, write_data, 4096) != 0)
 		abort();
 
 	close(fd);
 }
-*/
+
 int main(int argc, char *argv[])
 {
 	__async_bio();
-	//__async_dio();
+	__async_dio();
 
 	return 0;
 }
