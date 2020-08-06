@@ -84,13 +84,13 @@ int main(int argc, char *argv[])
     http_client.request("GET", "https://www.baidu.com")
                 .set_header("user-agent", "AnyClient/1.0.0")
                 .set_header("cookie", "1412")
-                .set_header("cookie", "1412")
                 .success([](protocol::HttpResponse& http_resp) {
                     cout << "[4]Asynchronous http request end. HttpStaus: " << http_resp.get_status_code() << endl;
-                    wg.done();
                 })
                 .error([](int state, int error, const std::string& errmsg) {
                     cout << "[4]Asynchronous http request end. error: " << errmsg << endl;
+                })
+                .complete([](WFHttpResult& res) {
                     wg.done();
                 })
                 .send();
@@ -154,11 +154,11 @@ int main(int argc, char *argv[])
                     cout << "[4]Asynchronous redis request end. success: " << val.is_ok() << endl;
                     for (size_t i = 0; i < val.arr_size(); i++)
                         cout << "[" << i << "] element-string: " << val[i].string_value() << endl;
-
-                    wg.done();
                 })
                 .error([](int state, int error, const std::string& errmsg) {
                     cout << "[4]Asynchronous redis request end. error: " << errmsg << endl;
+                })
+                .complete([](WFRedisResult& res) {
                     wg.done();
                 })
                 .send();
